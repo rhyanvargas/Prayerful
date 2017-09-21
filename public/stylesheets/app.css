@@ -1,0 +1,81 @@
+
+
+.main.container {
+  margin-top: 7em;
+}
+
+.ui.inverted.teal.menu {
+  background-color: #24D2A4; 
+}
+
+.ui.inverted.teal.menu .active.item {
+  background-color: rgba(0,0,0,.1)!important;
+} 
+
+.ui.inverted.pointing.menu .active.item:after,
+.ui.inverted.pointing.menu .active.item:hover:after
+ {
+  background: #20BD93 !important;
+}
+
+
+.ui.card {
+  width: 100% ;
+}
+.ui.card>.extra {
+  border-top: none !important;
+  font-size: .9em;
+  padding-top: 1em;
+  padding-bottom: 0;
+}
+   
+.meta span {
+  /* Adjust vertical position*/
+  position: relative;
+  top: 15%;
+  -webkit-transform: translateY(15%);
+  -ms-transform: translateY(15%);
+  transform: translateY(15%);
+}
+
+.card__user-text {
+  font-weight: bold;
+}
+.card__location-text {
+  font-style: italic;
+}
+
+.numPraying {
+  color: #24D2A4;
+  font-weight: bold;
+}
+
+.prayerHands {
+  width: 32px;
+  height: 32px;
+
+  /* Adjust the Vertical position*/
+  position: relative;
+  top: 15%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-15%);
+}
+
+.circle.icon {
+  font-size: 100px;
+  color: #24D2A4;
+
+}
+
+/* 
+****
+****  CUSTOM CLASSES ********************
+**** 
+*/
+
+.ui.icon.center {
+  left: 0;
+  right: 0;
+  margin: auto;
+}
