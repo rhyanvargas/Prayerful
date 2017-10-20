@@ -1,29 +1,15 @@
 // UTILITIES
-
-var bodyParser = require('body-parser'),
-    mongoose = require('mongoose'),
-    express = require('express'),
-    app = express();
-
-mongoose.connect = ('mongodb://localhost/prayerful', {useMongoClient: true});
-app.set('view engine', 'ejs');
-app.use(express.static('public'));
-app.use(bodyParser.urlencoded({extended: true}));
-
-// MODEL CONFIG - MONGOOSE
-// var userSchema = new mongoose.Schema({
-// })
-
-// var prayerSchema = new mongoose.Schema({
-// })
-// var likesSchema = new mongoose.Schema({
-// })
-
+const port = 3000
+var express = require('express'),
+    app = express(),
+    mongoose = require('mongoose')
+    prayersRoutes = require('./routes/prayers')
 // ROUTES
 app.get('/', function(req,res){
-  res.render('index');
+  res.send('HELLO FROM ROOT ROUTE');
 })
-
-app.listen(3000, function(){
-  console.log('==> SERVER STARTED http://localhost:3000');
-});
+app.use('/api/prayers',prayersRoutes)
+// SERVER
+app.listen(port, function(){
+  console.log('==> Prayer App SERVER STARTED ON localhost: '+port);
+})
